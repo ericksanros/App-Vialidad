@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  mat: 1
+  school: one
+  group: one
+
+two:
+  name: MyString
+  mat: 1
+  school: two
+  group: two

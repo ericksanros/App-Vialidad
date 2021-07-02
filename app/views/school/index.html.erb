@@ -1,0 +1,9 @@
+<h1>Campus</h1>
+
+<ul>
+  <% @schools.each do |school| %>
+    <button style="height:50px;width:200px">
+    <%= link_to school.name, school %>
+    </button>
+  <% end %>
+</ul>
