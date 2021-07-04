@@ -4,7 +4,7 @@ class GroupController < ApplicationController
     end
 
     def show
-        @students = List.where(group_id:params[:id], status:1)
+        @students = List.where(group_id:params[:id])
     end
    
 end
