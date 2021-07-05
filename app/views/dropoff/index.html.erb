@@ -1,6 +1,7 @@
 <meta http-equiv="refresh" content="3" />
 
-<h1>Alumnos <%= @cls.name %>  </h1>
+
+<h1>Alumnos   <%= $ccc.name %></h1>
 <br>
 <br>
 <table>
@@ -12,9 +13,9 @@
   </thead>
 
   <tbody>
-    <% @students.each do |student| %>
+    <% @stus.each do |stu| %>
       <tr>
-        <td><%= student.name %></td>
+        <td><%= stu.name %></td>
        </tr>
    <% end %>
   </tbody>
