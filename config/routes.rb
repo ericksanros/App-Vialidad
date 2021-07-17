@@ -1,15 +1,19 @@
 Rails.application.routes.draw do
 
-  root 'sessions#home'
+  
 
+  get 'home/index'
   #users routes
-  resources :user, only: [:new, :create, :edit, :update, :show, :destroy]
+  #resources :user, only: [:new, :create, :edit, :update, :show, :destroy]
 
-  #sessions toutes
-  get '/login', to: 'sessions#login'
-  post '/login' to: 'sessions#create'
-  post 'logout' to: 'sessions#destroy'
-  get '/logout' to: 'sessions#destroy'
+  root "home#index"
+  resources :users
+  resources :sessions, only: [:new, :create, :destroy]
+  get 'signup', to: 'users#new', as: 'signup'
+  get 'login', to: 'sessions#new', as: 'login'
+  post 'login', to: 'sessions#create'
+  get 'logout', to: 'sessions#destroy', as: 'logout'
+ 
 
   get 'dropoff/index'
   #root "school#index"
